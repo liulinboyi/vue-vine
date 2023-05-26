@@ -2,7 +2,7 @@ import path from 'node:path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import Inspect from 'vite-plugin-inspect'
-import { VineVitePlugin } from 'vue-vine/vite'
+import { vinePlugin } from '@vue-vine/vite-plugin'
 import AutoImport from 'unplugin-auto-import/vite'
 
 export default defineConfig({
@@ -14,7 +14,7 @@ export default defineConfig({
   },
   plugins: [
     vue(),
-    VineVitePlugin(),
+    vinePlugin(),
     Inspect(),
     AutoImport({
       imports: [
